@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THC GTM Meta Lab</title>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MTDFXW73');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager (head) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?`&l=${l}`:'';j.async=true;j.src=
+  `https://www.googletagmanager.com/gtm.js?id=GTM-MTDFXW73${dl}`;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MTDFXW73');</script>
+  <!-- End Google Tag Manager -->
   <style>
     :root {
       --primary: #1877f2;
@@ -32,13 +33,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .feature h3 { color: var(--accent); margin-bottom: 0.5rem; }
     footer { text-align: center; margin: 3rem 0; font-size: 0.9rem; color: #888; }
     .cta { display: inline-block; margin-top: 1rem; background: var(--accent); color: var(--highlight); padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
+    .actions { margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; }
+    .actions button, .actions input[type="submit"] {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+    form { display: flex; flex-direction: column; gap: 0.5rem; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    form input, form textarea { padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTDFXW73"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTDFXW73" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager -->
 
   <header>
     <h1>THC GTM META LAB</h1>
@@ -69,6 +81,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>✅ Lead &amp; Purchase</h3>
         <p>Configure formulários e confirmações de compra para medir conversões.</p>
       </div>
+    </section>
+
+    <section class="actions">
+      <button id="btn-viewcontent">Ver mais detalhes</button>
+      <button id="btn-addcart">Adicionar ao carrinho</button>
+      <form id="form-lead">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" value="Enviar">
+      </form>
+      <button id="btn-purchase">Finalizar Compra</button>
     </section>
   </div>
 
