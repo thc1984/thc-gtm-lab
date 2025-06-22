@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THC GTM Meta Lab</title>
+  <!-- Google Tag Manager (head) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?`&l=${l}`:'';j.async=true;j.src=
+  `https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX${dl}`;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    :root {
+      --primary: #1877f2;
+      --accent: #00c300;
+      --bg: #f4f6f9;
+      --text: #333;
+      --highlight: #fff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: var(--bg); color: var(--text); }
+    header { background: var(--primary); color: var(--highlight); padding: 2rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; }
+    header p { margin-top: 0.5rem; font-size: 1.1rem; }
+    .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .intro { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .intro h2 { color: var(--primary); margin-bottom: 1rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; margin-top: 2rem; }
+    .feature { background: #fff; padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .feature h3 { color: var(--accent); margin-bottom: 0.5rem; }
+    footer { text-align: center; margin: 3rem 0; font-size: 0.9rem; color: #888; }
+    .cta { display: inline-block; margin-top: 1rem; background: var(--accent); color: var(--highlight); padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager -->
+
+  <header>
+    <h1>THC GTM META LAB</h1>
+    <p>Seu laboratório de testes para Google Tag Manager &amp; Meta Pixel</p>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Bem-vindo ao THC Lab</h2>
+      <p>Esse ambiente foi criado para você testar configurações de GTM, Pixel da Meta e Conversions API de forma isolada e confiável. Perfeito para treinar, demonstrar setups e compartilhar com colegas.</p>
+      <a class="cta" href="#features">Explorar Recursos</a>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature">
+        <h3>📊 PageView</h3>
+        <p>Monitoramento de visitas em todas as páginas com gatilho "All Pages".</p>
+      </div>
+      <div class="feature">
+        <h3>👁️ ViewContent</h3>
+        <p>Rastreie cliques no botão "Ver mais detalhes" e ações de interesse.</p>
+      </div>
+      <div class="feature">
+        <h3>🛒 AddToCart</h3>
+        <p>Simule adições ao carrinho para entender o fluxo de e-commerce.</p>
+      </div>
+      <div class="feature">
+        <h3>✅ Lead &amp; Purchase</h3>
+        <p>Configure formulários e confirmações de compra para medir conversões.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 THC GTM Lab — Criado por Thiago Henrique Campos
+  </footer>
+</body>
+</html>
