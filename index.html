@@ -84,23 +84,16 @@
     </section>
 
     <section class="actions">
-      <button id="btn-viewcontent" onclick="dataLayer.push({ event: 'view_content_custom' })">Ver mais detalhes</button>
-      <button id="btn-addcart" onclick="dataLayer.push({ event: 'add_to_cart_custom' })">Adicionar ao carrinho</button>
-      <form id="form-lead" onsubmit="event.preventDefault(); dataLayer.push({
-        event: 'lead_form_submitted',
-        nome: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        telefone: document.getElementById('telefone').value
-      })">
+      <button id="btn-verdetalhes" onclick="dataLayer.push({ event: 'view_content_custom' })" data-ignore="true">Ver mais detalhes</button>
+      <button id="btn-addcart" onclick="dataLayer.push({ event: 'add_to_cart_custom' })" data-ignore="true">Adicionar ao carrinho</button>
+      <form id="form-lead" onsubmit="dataLayer.push({ event: 'lead_form_submitted', nome: document.getElementById('nome').value, email: document.getElementById('email').value, telefone: '11999999999' })" data-ignore="true">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required>
         <input type="submit" value="Enviar">
       </form>
-      <button id="btn-purchase" onclick="dataLayer.push({ event: 'purchase_completed', value: 59.90, currency: 'BRL', content_ids: ['produto-123'], content_type: 'product' })">Finalizar Compra</button>
+      <button id="btn-purchase" onclick="dataLayer.push({ event: 'purchase_completed', value: 59.90, currency: 'BRL', content_ids: ['produto-123'], content_type: 'product' })" data-ignore="true">Finalizar Compra</button>
       <a id="btn-whatsapp" href="https://wa.me/5511999999999" target="_blank" style="text-align:center; text-decoration:none; padding:0.75rem 1.5rem; background-color:#25d366; color:white; border-radius:5px; font-size:1rem;">Falar por WhatsApp</a>
     </section>
   </div>
