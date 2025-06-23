@@ -70,30 +70,32 @@
         <p>Monitoramento de visitas em todas as páginas com gatilho "All Pages".</p>
       </div>
       <div class="feature">
-        <h3>👁️ ViewContent</h3>
-        <p>Rastreie cliques no botão "Ver mais detalhes" e ações de interesse.</p>
+        <h3>👁️ Visualização</h3>
+        <p>Rastreie ações de interesse e interações com produtos.</p>
       </div>
       <div class="feature">
-        <h3>🛒 AddToCart</h3>
+        <h3>🛒 Carrinho</h3>
         <p>Simule adições ao carrinho para entender o fluxo de e-commerce.</p>
       </div>
       <div class="feature">
-        <h3>✅ Lead &amp; Purchase</h3>
-        <p>Configure formulários e confirmações de compra para medir conversões.</p>
+        <h3>✅ Formulário &amp; Compra</h3>
+        <p>Envie leads e finalize compras com eventos personalizados.</p>
       </div>
     </section>
 
     <section class="actions">
-      <button id="btn-verdetalhes" onclick="dataLayer.push({ event: 'view_content_custom' })" data-ignore="true">Ver mais detalhes</button>
-      <button id="btn-addcart" onclick="dataLayer.push({ event: 'add_to_cart_custom' })" data-ignore="true">Adicionar ao carrinho</button>
-      <form id="form-lead" onsubmit="dataLayer.push({ event: 'lead_form_submitted', nome: document.getElementById('nome').value, email: document.getElementById('email').value, telefone: '11999999999' })" data-ignore="true">
+      <button id="btn-info" onclick="dataLayer.push({ event: 'view_content_custom' })" data-ignore="true">Mais informações</button>
+      <button id="btn-cart" onclick="dataLayer.push({ event: 'add_to_cart_custom' })" data-ignore="true">Adicionar item</button>
+      <form id="form-lead" onsubmit="dataLayer.push({ event: 'lead_form_submitted', nome: document.getElementById('nome').value, email: document.getElementById('email').value, telefone: document.getElementById('telefone').value })" data-ignore="true">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
         <input type="submit" value="Enviar">
       </form>
-      <button id="btn-purchase" onclick="dataLayer.push({ event: 'purchase_completed', value: 59.90, currency: 'BRL', content_ids: ['produto-123'], content_type: 'product' })" data-ignore="true">Finalizar Compra</button>
+      <button id="btn-finalizar" onclick="dataLayer.push({ event: 'purchase_completed', value: 59.90, currency: 'BRL', content_ids: ['produto-123'], content_type: 'product' })" data-ignore="true">Concluir Pedido</button>
       <a id="btn-whatsapp" href="https://wa.me/5511999999999" target="_blank" style="text-align:center; text-decoration:none; padding:0.75rem 1.5rem; background-color:#25d366; color:white; border-radius:5px; font-size:1rem;">Falar por WhatsApp</a>
     </section>
   </div>
