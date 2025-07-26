@@ -76,7 +76,7 @@
     </section>
 
     <section class="actions">
-      <button id="btn-a1" onclick="dataLayer.push({ event: 'custom_event_01' })">Ação 01</button>
+      <button id="btn-a1" onclick="dataLayer.push({ event: 'add_to_cart_custom', ecommerce: { items: [{ item_name: 'Camisa THC Verde', item_id: 'CAM-001', price: 99.90, quantity: 1 }] } })">Ação 01</button>
       <button id="btn-a2" onclick="dataLayer.push({ event: 'custom_event_02' })">Ação 02</button>
       <form id="form-lead" onsubmit="event.preventDefault(); dataLayer.push({ event: 'custom_event_03', nome: document.getElementById('nome').value, email: document.getElementById('email').value, telefone: document.getElementById('telefone').value })">
         <label for="nome">Nome:</label>
